@@ -50,9 +50,6 @@ interface RetrofitInterface {
           .build()
 
       return retrofit.create(RetrofitInterface::class.java)
-//        USAGE
-//        val apiService = RetrofitInterface.create()
-//        apiService.search(/* search params go in here */)
     }
   }
 

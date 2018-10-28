@@ -1,142 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:fillViewport="true"
-    android:layout_height="match_parent">
-  <android.support.constraint.ConstraintLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      tools:context="com.notadeveloper.app.mysticnumber.MainActivity">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        app:srcCompat="@drawable/ic_infinity"
-        android:id="@+id/imageView"
-        android:contentDescription="@string/app_logo_infinity"
-        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="16dp"/>
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textview"
-        android:textStyle="bold"
-        android:text="@string/an_api_for_interesting_facts_about_numbers"
-        android:layout_marginStart="16dp"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        android:layout_marginTop="16dp" app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        android:layout_marginBottom="16dp" app:layout_constraintLeft_toRightOf="@+id/imageView"
-        android:layout_marginLeft="16dp"
-    />
+        tools:context="com.notadeveloper.app.mysticnumber.MainActivity">
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/radiogrouptype"
-        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.502" android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
-      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-          android:text="@string/choose_query_type"/>
-      <RadioButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/input"
-          android:text="@string/input"
-          android:checked="true"
-      />
-      <RadioButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/random"
-          android:text="@string/random"
-      />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/app_logo_infinity"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_infinity" />
 
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/an_api_for_interesting_facts_about_numbers"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintLeft_toRightOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
-    </RadioGroup>
+        <RadioGroup
+            android:id="@+id/radiogrouptype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-    <RadioGroup
-        android:id="@+id/radiogroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/radiogrouptype"
-        app:layout_constraintRight_toLeftOf="@+id/editText"
-        app:layout_constraintLeft_toLeftOf="parent">
-      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-          android:text="@string/search_by"
-      />
-      <RadioButton android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/math"
-          android:text="@string/math"
-          android:checked="true"
-      />
-      <RadioButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/trivia"
-          android:text="@string/trivia"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_query_type" />
 
-      />
-      <RadioButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/date"
-          android:text="@string/date"
-      />
+            <RadioButton
+                android:id="@+id/input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/input" />
 
-      <RadioButton
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/year"
-          android:text="@string/year"
-      />
+            <RadioButton
+                android:id="@+id/random"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/random" />
 
 
-    </RadioGroup>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="@string/enter_a_number"
-        android:inputType="number"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/radiogroup"
-        android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="@+id/radiogroup"
-        android:layout_marginBottom="8dp" app:layout_constraintLeft_toRightOf="@+id/radiogroup"
-        android:id="@+id/editText"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        android:textColor="@android:color/white"
-        android:drawableStart="@mipmap/ic_launcher"
-        android:drawableLeft="@mipmap/ic_launcher"
-        android:text="@string/search"
-        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
-        android:filterTouchesWhenObscured="true" android:id="@+id/button"/>
-    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-        android:id="@+id/resulttext"
-        android:layout_margin="20dp"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:text="@string/search_to_display_results"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/button"/>
+        </RadioGroup>
 
-    <android.support.constraint.Guideline android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:id="@+id/guideline"
-        app:layout_constraintGuide_begin="20dp" android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp" tools:layout_editor_absoluteX="20dp"/>
-    <android.support.constraint.Guideline android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:id="@+id/guideline2"
-        app:layout_constraintGuide_begin="20dp" android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp" tools:layout_editor_absoluteX="20dp"/>
-  </android.support.constraint.ConstraintLayout>
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/radiogrouptype">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_by" />
+
+            <RadioButton
+                android:id="@+id/math"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/math" />
+
+            <RadioButton
+                android:id="@+id/trivia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trivia"
+
+                />
+
+            <RadioButton
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date" />
+
+            <RadioButton
+                android:id="@+id/year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/year" />
+
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/enter_a_number"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/radiogroup"
+            app:layout_constraintLeft_toRightOf="@+id/radiogroup"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/radiogroup" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@mipmap/ic_launcher"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/search"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup" />
+
+        <TextView
+            android:id="@+id/resulttext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/search_to_display_results"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>
