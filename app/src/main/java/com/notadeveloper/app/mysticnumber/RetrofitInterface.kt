@@ -11,7 +11,7 @@ import retrofit2.http.Path
 
 /**
  * Created by krsnv on 06-Aug-17.
- * //Retrofit Interface for Public Api http://numbersapi.com/#42
+ * Retrofit Interface for Public Api http://numbersapi.com/#42
  */
 interface RetrofitInterface {
   @GET("{number}")
