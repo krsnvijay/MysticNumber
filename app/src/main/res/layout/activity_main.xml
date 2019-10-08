@@ -11,6 +11,33 @@
         android:layout_height="wrap_content"
         tools:context="com.notadeveloper.app.mysticnumber.MainActivity">
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@mipmap/ic_launcher"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/search"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/enter_a_number"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/radiogroup"
+            app:layout_constraintLeft_toRightOf="@+id/radiogroup"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/radiogroup" />
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="75dp"
@@ -20,20 +47,6 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_infinity" />
-
-        <TextView
-            android:id="@+id/textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/an_api_for_interesting_facts_about_numbers"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintLeft_toRightOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <RadioGroup
             android:id="@+id/radiogrouptype"
@@ -45,11 +58,6 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/choose_query_type" />
 
             <RadioButton
                 android:id="@+id/input"
@@ -64,7 +72,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/random" />
 
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_query_type" />
+            
         </RadioGroup>
 
         <RadioGroup
@@ -75,11 +87,6 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/editText"
             app:layout_constraintTop_toBottomOf="@+id/radiogrouptype">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/search_by" />
 
             <RadioButton
                 android:id="@+id/math"
@@ -108,35 +115,26 @@
                 android:layout_height="wrap_content"
                 android:text="@string/year" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_by" />
 
         </RadioGroup>
 
-        <EditText
-            android:id="@+id/editText"
+        <TextView
+            android:id="@+id/textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:hint="@string/enter_a_number"
-            android:inputType="number"
-            app:layout_constraintBottom_toBottomOf="@+id/radiogroup"
-            app:layout_constraintLeft_toRightOf="@+id/radiogroup"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/radiogroup" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:drawableStart="@mipmap/ic_launcher"
-            android:drawableLeft="@mipmap/ic_launcher"
-            android:filterTouchesWhenObscured="true"
-            android:text="@string/search"
-            android:textColor="@android:color/white"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radiogroup" />
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/an_api_for_interesting_facts_about_numbers"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintLeft_toRightOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/resulttext"

@@ -13,6 +13,5 @@ class MyApplication : Application() {
     super.onCreate()
 
     Stetho.initializeWithDefaults(this)
-    // Normal app init code...
   }
 }
